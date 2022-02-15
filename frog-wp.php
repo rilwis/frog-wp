@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Frog
+ * Plugin Name: Frog WP
  * Plugin URI:  https://github.com/rilwis/frog-wp
  * Description: A simple way to debug
  * Version:     1.0.0
