@@ -15,16 +15,14 @@ defined( 'ABSPATH' ) || die;
 
 require __DIR__ . '/vendor/autoload.php';
 
-use WebSocket\Client;
+use FrogWP\Factory;
 use Riimu\Kit\PHPEncoder\PHPEncoder;
 
 function f( ...$variables ) {
 	try {
 		// Try sending data to Frog socket server.
 		$output = wp_json_encode( $variables );
-		$client  = new Client( 'ws://127.0.0.1:1503' );
-		$client->binary( $output );
-		$client->close();
+		Factory::make()->binary( $output );
 	} catch( Exception $e ) {
 		// Log to default logger as a fallback. Make data formatted.
 		$encoder = new PHPEncoder;
@@ -36,3 +34,5 @@ function f( ...$variables ) {
 		error_log( $output );
 	}
 }
+
+Factory::shutdown();

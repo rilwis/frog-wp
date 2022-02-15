@@ -2,5 +2,10 @@
 	"require": {
 		"textalk/websocket": "^1.5",
 		"riimu/kit-phpencoder": "^2.4"
+	},
+	"autoload": {
+		"psr-4": {
+			"FrogWP\\": "src/"
+		}
 	}
 }
