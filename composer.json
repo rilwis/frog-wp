@@ -1,5 +1,6 @@
 {
 	"require": {
-		"textalk/websocket": "^1.5"
+		"textalk/websocket": "^1.5",
+		"riimu/kit-phpencoder": "^2.4"
 	}
 }
