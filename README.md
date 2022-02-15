@@ -1,4 +1,4 @@
-# Frog - A new way to debug in PHP/WordPress
+# Frog - A new way to debug in WordPress
 
 This is a WordPress plugin that sends debug data to [Frog](https://github.com/rilwis/frog).
 
