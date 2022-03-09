@@ -19,6 +19,12 @@ use FrogWP\Factory;
 use Riimu\Kit\PHPEncoder\PHPEncoder;
 
 function f( ...$variables ) {
+	$traces    = debug_backtrace();
+	$caller    = reset( $traces );
+	$parts     = explode( '/', '/' . $caller['file'] );
+	$file_name = end( $parts );
+	array_unshift( $variables, "{$file_name}:{$caller['line']}" );
+
 	try {
 		// Try sending data to Frog socket server.
 		$output = wp_json_encode( $variables );
